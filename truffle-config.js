@@ -15,7 +15,7 @@ module.exports = {
 
   compilers: {
     solc: {
-      version: "0.8.4", // Specify the version of solc you want to use
+      version: "0.8.4", // Version of solc you want to use
       settings: {
         optimizer: {
           enabled: true,

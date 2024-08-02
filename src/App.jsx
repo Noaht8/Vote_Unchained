@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+//import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import CreateProposal from "./components/ProposalVoting/CreateProposal";
+import RegisterShareholder from "./components/ProposalVoting/RegisterShareholder";
+import EditProposals from "./components/ProposalVoting/EditProposals";
+import ApproveShareholders from "./components/ProposalVoting/ApproveShareholders";
+import ShareholderInformation from "./components/ProposalVoting/ShareholderInformation";
+import Vote from "./components/ProposalVoting/Vote";
+import Result from "./components/ProposalVoting/Result";
+import AllResults from "./components/ProposalVoting/AllResults";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        {/* Shareholder Proposal Voting Routes */}
+        <Route path="/createProposal" element={<CreateProposal />} />
+        <Route path="/vote/:id" element={<Vote />} />
+        <Route
+          path="/registerShareholder/:id"
+          element={<RegisterShareholder />}
+        />
+        <Route path="/result/:id" element={<Result />} />
+        <Route
+          path="/ShareholderInformation/:id"
+          element={<ShareholderInformation />}
+        />
+        <Route path="/editProposals" element={<EditProposals />} />
+        <Route path="/approveShareholders" element={<ApproveShareholders />} />
+        <Route path="/allResults" element={<AllResults />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
