@@ -37,7 +37,7 @@ cd src
 
 ### 2. Install Dependencies
 Install the dependencies for both the backend and the frontend:
-# Backend (Truffle), Frontend (React)
+#### Backend (Truffle), Frontend (React)
 ```
 npm install
 ```
