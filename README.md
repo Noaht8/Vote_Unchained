@@ -31,6 +31,64 @@ Before running this project, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone 
-cd blockchain-voting-system
+git clone https://github.com/Noaht8/Vote_Unchained.git
+cd src
+```
 
+### 2. Install Dependencies
+Install the dependencies for both the backend and the frontend:
+# Backend (Truffle), Frontend (React)
+```
+npm install
+```
+
+### 3. Set Up Local Blockchain
+Open Ganache and create a new workspace.
+Update truffle-config.js with the correct Ganache settings (localhost with port 8545).
+Deploy the smart contracts to your local blockchain
+```
+truffle migrate
+```
+
+### 4. Run the IPFS Node
+If you want to run a local IPFS node, start IPFS:
+```
+ipfs init
+ipfs daemon
+```
+
+### 5. Start the React Frontend
+```
+npm start
+```
+
+### 6. Open the Application
+Navigate to `http://localhost:3000` in your browser to interact with the voting system.
+
+### Project Structure
+```
+blockchain-voting-system/
+│
+├── contracts/           # Solidity smart contracts
+│   └── ShareVoting.sol       # Core voting contract
+│
+├── migrations/          # Deployment scripts for Truffle
+│
+├── client/              # React frontend
+│   ├── src/
+│   │   ├── components/  # Reusable React components
+│   │   ├── contracts    # Contracts after compilation
+│   │   └── App.jsx      # Main app component
+│   └── public/          # Public assets
+│
+├── test/                # Unit tests for smart contracts
+│
+└── truffle-config.js    # Truffle project configuration
+```
+
+
+### License
+This project is licensed under the `MIT License`. See the LICENSE file for more information.
+```
+This template covers the necessary instructions for setting up and running the blockchain-based voting system, while also highlighting the important features and tools used in the project.
+```
