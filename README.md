@@ -30,8 +30,10 @@ Before running this project, ensure you have the following installed:
 ## Getting Started
 
 ### 1. Clone the Repository
-```bash
+```
 git clone https://github.com/Noaht8/Vote_Unchained.git
+```
+```
 cd src
 ```
 
@@ -54,6 +56,8 @@ truffle migrate
 If you want to run a local IPFS node, start IPFS:
 ```
 ipfs init
+```
+```
 ipfs daemon
 ```
 
