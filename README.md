@@ -67,7 +67,7 @@ Navigate to `http://localhost:3000` in your browser to interact with the voting 
 
 ### Project Structure
 ```
-blockchain-voting-system/
+Vote_Unchained/
 │
 ├── contracts/           # Solidity smart contracts
 │   └── ShareVoting.sol       # Core voting contract
