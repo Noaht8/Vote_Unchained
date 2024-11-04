@@ -28,7 +28,7 @@ const ConfirmationModal = ({ isOpen, onClose, onConfirm, message }) => {
 };
 
 ConfirmationModal.propTypes = {
-  isOpen: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
   message: PropTypes.string.isRequired,

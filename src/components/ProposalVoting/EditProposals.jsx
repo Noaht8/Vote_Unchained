@@ -489,6 +489,7 @@ export default function EditProposals() {
                       <ConfirmationModal
                         isOpen={isModalOpen}
                         onClose={closeModal}
+                        message="Are You Sure"
                         onConfirm={() => handleConfirmDelete()}
                       />
                     </div>

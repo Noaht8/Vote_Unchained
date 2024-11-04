@@ -85,12 +85,14 @@ const CreateProposal = () => {
   }
 
   const generateNewId = () => {
+    console.log("Generating New ID");
     const newId = generateUniqueId();
     setProposalId(newId);
   };
 
   const handleCreateProposal = async (data, ipfsHash) => {
     try {
+      console.log("Starting...");
       const endTime = Math.floor(new Date(data.endDate).getTime() / 1000); // converting endDate to Unix timestamp
       console.log("End Time:", endTime);
       console.log("The Hash:", ipfsHash);
@@ -120,7 +122,6 @@ const CreateProposal = () => {
     //await setIpfsHash(""); // Clear the previous hash
     console.log("Starting Create Proposal");
     await generateNewId();
-
     const data = {
       proposalId,
       proposalName,
@@ -132,6 +133,7 @@ const CreateProposal = () => {
       files: [],
       timestamp: new Date().toISOString(),
     };
+    //console.log("Data = ", data);
 
     // Add files to IPFS
     for (const file of files) {
